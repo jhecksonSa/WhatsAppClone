@@ -23,31 +23,33 @@ class _HomeState extends State<Home> {
                 onPressed: () {},
                 icon: const Icon(Icons.search),
               ),
-              IconButton(onPressed: () {}, icon: const Icon(Icons.more_vert))
+              IconButton(
+                onPressed: () {},
+                icon: const Icon(Icons.more_vert),
+              )
             ],
             bottom: TabBar(
                 labelPadding: const EdgeInsets.only(left: 10),
                 indicatorWeight: 3,
                 indicatorColor: Colors.green.shade800,
                 tabs: [
-                  TopTabs(const Icon(Icons.camera_alt)),
-                  TopTabs(const Text('CONVERSAS')),
-                  TopTabs(const Text('STATUS')),
-                  TopTabs(const Text('CHAMADAS')),
+                  TopTabs(param: const Icon(Icons.camera_alt)),
+                  TopTabs(param: const Text('CONVERSAS')),
+                  TopTabs(param: const Text('STATUS')),
+                  TopTabs(param: const Text('CHAMADAS')),
                 ]),
           ),
           body: const TabBarView(children: [
-            Text('tab 1'),
-            Text('tab 2'),
-            Text('tab 3'),
-            Text('tab 3'),
+            Icon(Icons.camera_alt, size: 200, color: Colors.amber),
+            Icon(Icons.sms, size: 200),
+            Icon(Icons.update, size: 200),
+            Icon(Icons.call, size: 200),
           ]),
           floatingActionButton: FloatingActionButton(
             backgroundColor: Colors.green.shade800,
-            onPressed: () {},
-            child: Icon(Icons.message),
-          )
-        ),
+            onPressed: () {print('Ok');},
+            child: const Icon(Icons.message),
+          )),
     );
   }
 }

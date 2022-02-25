@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class TopTabs extends StatelessWidget {
   Widget param;
 
-  TopTabs(this.param, {Key? key}) : super(key: key);
+  TopTabs({required this.param, Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
