@@ -47,7 +47,9 @@ class _HomeState extends State<Home> {
           ]),
           floatingActionButton: FloatingActionButton(
             backgroundColor: Colors.green.shade800,
-            onPressed: () {print('Ok');},
+            onPressed: () {
+              print('Ok');
+            },
             child: const Icon(Icons.message),
           )),
     );
