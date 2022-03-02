@@ -39,15 +39,25 @@ class _HomeState extends State<Home> {
                   TopTabs(param: const Text('CHAMADAS')),
                 ]),
           ),
-          body: const TabBarView(children: [
-            Icon(Icons.camera_alt, size: 200, color: Colors.amber),
-            Icon(Icons.sms, size: 200),
-            Icon(Icons.update, size: 200),
-            Icon(Icons.call, size: 200),
+          body: TabBarView(children: [
+            Icon(Icons.camera_alt, size: 200),
+            ListView(  
+              padding: const EdgeInsets.all(8),           
+              children: [
+                Container(child: Icon(Icons.camera_alt, size: 30), color: Colors.amber, margin: EdgeInsets.all(2),),
+                Container(child: Icon(Icons.sms, size: 30), color: Colors.amber, margin: EdgeInsets.all(2)),
+                Container(child: Icon(Icons.update, size: 30), color: Colors.amber, margin: EdgeInsets.all(2)),
+                Container(child: Icon(Icons.call, size: 30), color: Colors.amber, margin: EdgeInsets.all(2)),
+              ],
+            ),
+            ListView(padding: EdgeInsets.all(8), children: [Container(child: Icon(Icons.update, size: 200), color: Colors.amber)], ),
+            ListView(padding: EdgeInsets.all(8), children: [Container(child: Icon(Icons.call, size: 200), color: Colors.amber)],),
           ]),
           floatingActionButton: FloatingActionButton(
             backgroundColor: Colors.green.shade800,
-            onPressed: () {print('Ok');},
+            onPressed: () {
+              print('Ok');
+            },
             child: const Icon(Icons.message),
           )),
     );
