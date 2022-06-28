@@ -14,11 +14,11 @@ class Home extends StatefulWidget {
   State<Home> createState() => _HomeState();
 }
 
-Widget topTab({required Widget widget}) {
+Widget topTab({required Widget child}) {
   return Padding(
     padding: const EdgeInsets.all(8.0),
     child: TopTabs(
-      param: widget,
+      param: child,
     ),
   );
 }
@@ -47,10 +47,25 @@ class _HomeState extends State<Home> {
             indicatorWeight: 2,
             indicatorColor: Colors.green.shade800,
             tabs: [
-              topTab(widget: const Icon(Icons.camera_alt)),
-              topTab(widget: const Text('CONVERSAS')),
-              topTab(widget: const Text('STATUS')),
-              topTab(widget: const Text('CHAMADAS')),
+              topTab(child: const Icon(Icons.camera_alt)),
+              topTab(
+                child: const Text(
+                  'CONVERSAS',
+                  style: TextStyle(fontSize: 12),
+                ),
+              ),
+              topTab(
+                child: const Text(
+                  'STATUS',
+                  style: TextStyle(fontSize: 12),
+                ),
+              ),
+              topTab(
+                child: const Text(
+                  'CHAMADAS',
+                  style: TextStyle(fontSize: 12),
+                ),
+              ),
             ],
           ),
         ),
