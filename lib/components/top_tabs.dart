@@ -9,8 +9,9 @@ class TopTabs extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        child: param,
-        height: 30,
-        alignment: Alignment.center);
+      child: param,
+      height: 30,
+      alignment: Alignment.center,
+    );
   }
 }
